@@ -1,6 +1,6 @@
 package examples;
 
-import static fiji.plugin.trackmate.tracking.TrackerKeys.KEY_TRACKLET_LENGTH;
+import static examples.TrackerKeys.KEY_TRACKLET_LENGTH;
 
 import java.awt.Frame;
 import java.util.ArrayList;
@@ -12,10 +12,7 @@ import org.jgrapht.alg.connectivity.ConnectivityInspector;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
 import org.jgrapht.traverse.BreadthFirstIterator;
-import org.scijava.Cancelable;
-import org.scijava.Named;
-import org.scijava.plugin.Plugin;
-
+s
 import fiji.plugin.trackmate.Spot;
 import fiji.plugin.trackmate.Logger;
 import fiji.plugin.trackmate.Model;
@@ -51,7 +48,6 @@ public class TrackInspector implements TrackMateAction {
 			timecutoff = (Double) settings.trackerSettings.get(KEY_TRACKLET_LENGTH);
 		
 		
-		final ConnectivityInspector<Spot, DefaultWeightedEdge> connectivity = new ConnectivityInspector<>(graph);
 
 		model.beginUpdate();
 
@@ -188,11 +184,12 @@ public Set<Spot> connectedSetOf(SimpleWeightedGraph<Spot, DefaultWeightedEdge> g
 
 	return connectedSet;
 }
-	@Override
-	public void setLogger(Logger logger) {
-		
-		
-		
-	}
+
+@Override
+public void setLogger(Logger logger) {
+	// TODO Auto-generated method stub
+	
+}
+	
 
 }
