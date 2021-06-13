@@ -11,10 +11,10 @@
 
 	<groupId>sc.fiji</groupId>
 	<artifactId>TrackInspector</artifactId>
-	<version>0.0.1</version>
+	<version>2.0.0</version>
 
 	<name>TrackInspector</name>
-	<description>TrackInspector for TrackMate.</description>
+	<description>TrackInspector for Trackmate.</description>
 	<url>https://imagej.net/TrackInspector</url>
 	<inceptionYear>2020</inceptionYear>
 	<organization>
@@ -45,7 +45,20 @@
 			</roles>
 		</developer>
 	</developers>
-	<contributor>
+	<contributors>
+		<contributor>
+			<name>Claudia Carabana Garcia</name>
+			<url>http://imagej.net/User:ClaudiaCarabanaGarcia</url>
+			<properties><id>claudiacarabana</id></properties>
+
+<roles>
+                                <role>founder</role>
+                                <role>debugger</role>
+                                <role>reviewer</role>
+                                <role>support</role>
+                                
+                        </roles>
+		</contributor>
 	</contributors>
 
 	<mailingLists>
@@ -67,12 +80,12 @@
 	</issueManagement>
 	<ciManagement>
 		<system>Travis CI</system>
-		<url>https://travis-ci.org/kapoorlab/TrackInspector</url>
+		<url>https://travis-ci.org/kapoorlab/TrackINspector</url>
 	</ciManagement>
 
 	<properties>
 		<license.licenseName>gpl_v3</license.licenseName>
-		<license.copyrightOwners>BTrack developers.</license.copyrightOwners>
+		<license.copyrightOwners>TrackInspector developers.</license.copyrightOwners>
 
 		
 
