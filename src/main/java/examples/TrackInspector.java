@@ -1,4 +1,4 @@
-package fiji.plugin.trackmate.examples.tracker;
+package examples;
 
 import static fiji.plugin.trackmate.tracking.TrackerKeys.KEY_TRACKLET_LENGTH;
 
