@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>29.2.1</version>
+		<relativePath />
+	</parent>
+
+	<groupId>sc.fiji</groupId>
+	<artifactId>TrackInspector</artifactId>
+	<version>0.0.1</version>
+
+	<name>TrackInspector</name>
+	<description>TrackInspector for TrackMate.</description>
+	<url>https://imagej.net/TrackInspector</url>
+	<inceptionYear>2020</inceptionYear>
+	<organization>
+		<name>Fiji</name>
+		<url>https://fiji.sc/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>GNU General Public License v3+</name>
+			<url>https://www.gnu.org/licenses/gpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>kapoorlab</id>
+			<name>Varun Kapoor</name>
+			<url>http://imagej.net/User:MTrack</url>
+			<roles>
+				<role>founder</role>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>ImageJ Forum</name>
+			<archive>http://forum.imagej.net/</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/kapoorlab/TrackInspector</connection>
+		<developerConnection>scm:git:git@github.com:kapoorlab/TrackInspector</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/kapoorlab/TrackInspector</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/kapoorlab/TrackInspector/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/kapoorlab/TrackInspector</url>
+	</ciManagement>
+
+	<properties>
+		<license.licenseName>gpl_v3</license.licenseName>
+		<license.copyrightOwners>BTrack developers.</license.copyrightOwners>
+
+		
+
+		
+<imglib2.version>5.8.0</imglib2.version>
+		<zip4j.version>1.3.2</zip4j.version>
+		<!-- NB: Deploy releases to the ImageJ Maven repository. -->
+		<releaseProfiles>deploy-to-imagej</releaseProfiles>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>imagej.public</id>
+			<url>http://maven.imagej.net/content/groups/public</url>
+		</repository>
+	</repositories>
+   
+<dependencies>
+		<!-- Fiji dependencies -->
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>fiji-lib</artifactId>
+		</dependency>
+
+		<!-- ImageJ dependencies -->
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>imagej-deprecated</artifactId>
+		</dependency>
+
+		<!-- ImgLib2 dependencies -->
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-algorithm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-algorithm-gpl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-ij</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.imglib2</groupId>
+			<artifactId>imglib2-roi</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-core</artifactId>
+		</dependency>
+
+		<!-- SciJava dependencies -->
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.scijava</groupId>
+			<artifactId>scijava-listeners</artifactId>
+		</dependency>
+
+		<!-- Third party dependencies -->
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>gov.nist.math</groupId>
+			<artifactId>jama</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jgrapht</groupId>
+			<artifactId>jgrapht-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-dom</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlgraphics</groupId>
+			<artifactId>batik-svggen</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom2</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.jfree</groupId>
+			<artifactId>jfreechart</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.vlsi.mxgraph</groupId>
+			<artifactId>jgraphx</artifactId>
+		</dependency>
+		<dependency>
+		    <groupId>org.drjekyll</groupId>
+		    <artifactId>fontchooser</artifactId>
+    		<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.opencsv</groupId>
+			<artifactId>opencsv</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.scif/pom-scifio -->
+<!-- https://mvnrepository.com/artifact/io.scif/scifio -->
+<dependency>
+    <groupId>io.scif</groupId>
+    <artifactId>scifio</artifactId>
+    <version>0.24.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/net.imagej/imagej-ops -->
+<dependency>
+    <groupId>net.imagej</groupId>
+    <artifactId>imagej-ops</artifactId>
+    <version>0.45.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/net.imagej/ij -->
+
+<!-- https://mvnrepository.com/artifact/net.imagej/imagej -->
+<dependency>
+    <groupId>net.imagej</groupId>
+    <artifactId>imagej</artifactId>
+    <version>2.0.0-rc-68</version>
+</dependency>
+
+		<dependency>
+			<groupId>math.geom2d</groupId>
+			<artifactId>javaGeom</artifactId>
+			<version>0.11.1</version>
+		</dependency>
+		<dependency>
+			<groupId>sc.fiji</groupId>
+	<artifactId>bigdataviewer-vistools</artifactId>
+	</dependency>
+	<dependency>
+			<groupId>sc.fiji</groupId>
+			<artifactId>bigdataviewer-core</artifactId>
+		</dependency>
+		<!-- Test dependencies -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
